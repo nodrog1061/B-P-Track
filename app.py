@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify, render_template
 from flask_marshmallow import Marshmallow
 from flask_restful import Resource, Api
+from app_functions import *
 import subprocess
 import datetime
 import pickle
 import os
-from functions import apiKeyCheck, storeDataPT
+
 
 
 
