@@ -1,3 +1,4 @@
-flask-marshmallow
-flask
-flask-restful
+pydantic
+starlette
+uvicorn
+fastapi
