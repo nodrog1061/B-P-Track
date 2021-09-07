@@ -12,12 +12,15 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-class add_device_body(BaseModel):
+class addDeviceIn(BaseModel):
     RoomNumber: int
+    DeviceId: int
 
+class addDeviceOut(BaseModel):
+    State: str
 
 @app.post("/add_device/")
-async def add_device(api_key: str = "null", data: add_device_body):
+async def add_device(data: addDeviceIn, api_key: str = "null", responseModel=addDeviceOut):
 
-
-    return {apiKeyCheck(api_key)}
+    print(data.RoomNumber)
+    return {"apiKey": apiKeyCheck(api_key),"roomNumber": data.RoomNumber}

@@ -2,3 +2,4 @@ pydantic
 starlette
 uvicorn
 fastapi
+tinydb
